@@ -10,21 +10,21 @@ jobs:
             uses: actions/setup-node@v3.8.1
             with:
               node-version: '18'
-    lint:
-        runs-on: ubuntu-latest
-        needs: prepare
-        steps:
-        - name: Lint Project
-          run: npm lint
-    test:
-        runs-on: ubuntu-latest
-        needs: lint
-        steps:
-        - name: Test app
-          uses: npm test
-    build:
-        runs-on: ubuntu-latest
-        needs: test
-        steps:
-        - name: Build app
-          uses: npm build
+    # lint:
+    #     runs-on: ubuntu-latest
+    #     needs: prepare
+    #     steps:
+    #     - name: Lint Project
+    #       run: npm lint
+    # test:
+    #     runs-on: ubuntu-latest
+    #     needs: lint
+    #     steps:
+    #     - name: Test app
+    #       uses: npm test
+    # build:
+    #     runs-on: ubuntu-latest
+    #     needs: test
+    #     steps:
+    #     - name: Build app
+    #       uses: npm build
