@@ -15,16 +15,16 @@ jobs:
         needs: prepare
         steps:
           - name: Lint Project
-            run: npm lint
+            run: npm run lint
     test:
         runs-on: ubuntu-latest
         needs: lint
         steps:
           - name: Test app
-            run: npm test
+            run: npm run test
     build:
         runs-on: ubuntu-latest
         needs: test
         steps:
           - name: Build app
-            run: npm build
+            run: npm run build
