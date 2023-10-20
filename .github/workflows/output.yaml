@@ -1,0 +1,8 @@
+name: Output Workflow
+on: workflow_dispatch
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Output data
+            run: echo "${{github.event}}"
